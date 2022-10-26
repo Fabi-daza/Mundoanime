@@ -20,6 +20,17 @@ body{
     grid-template-rows: 350px auto 50px;
     grid-template-columns: 20% 80%;
   }
+@media all and (max-width:1023px){
+    #page{
+      grid-template-areas:
+      "Head Head"
+      "Lateral Lateral"
+      "Product Products"
+      "Footer Footer";
+      grid-template-rows: 350px auto auto 50px;
+      grid-template-columns: auto auto;
+    }
+  }
 #page Header {
     grid-area: Head;
     background-image: url(../img/banner.jpg);
@@ -36,12 +47,6 @@ body{
     grid-area: Footer;
     background-color: var(--btn);
   }
-.Head h1{
-  color: #ffffff;
-  font-size: 80px;
-  text-align: center;
-  padding-top: 40px;  
-}
 .Products{
   display: grid;
   grid-template-columns: auto auto auto;
@@ -49,6 +54,7 @@ body{
   justify-content: center;
   padding: 30px;
 }
+
 .Products .box{
   display: flex;
   flex-direction: column;
@@ -96,24 +102,59 @@ body{
 .Lateral{
   background-color: var(--card);
   border-radius: 30px;
-  margin: 30px;
-  padding-top:20px;
+  margin: 30px 10px;
+  padding:20px;
   box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   height: fit-content;
 }
-.Lateral h3{
-  width: 100%;
-  text-align: center;
-}
 .Lateral ul li{
   list-style: none;
   cursor: pointer;
 }
+@media all and (max-width:1023px){
+  .Lateral{
+    flex-direction: row;
+    justify-content: center;
+    max-width: 80%;
+  }
+  .Lateral .filter{
+    display: flex;
+  }
+  .Lateral .filter li{
+    margin:0px 10px 0px 10px
+  }
+  .tags li{
+    display: none;
+    position: absolute;
+  }
+  .tags li:hover{
+    display:block;
+  }
+  .Products{
+    justify-content: flex-start;
+  }
+}
+@media all and (max-width:768px){
+  #page{
+    grid-template-areas:
+    "Head Head"
+    "Latera Lateral"
+    "Product Product"
+    "Footer";
+    grid-template-rows: 350px auto auto 50px;
+    grid-template-columns: auto;
+  }
+  .Products{
+    grid-template-columns: auto;
+    gap: 10px;
+  }
+}
 footer{
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   font-weight: bold;
