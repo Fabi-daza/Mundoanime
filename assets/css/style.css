@@ -132,7 +132,6 @@ body{
   }
   .Lateral .filter{
     display: flex;
-    margin: 20px;
   }
   .Lateral .filter li{
     margin:0px 10px 0px 10px
@@ -155,6 +154,18 @@ body{
     grid-template-columns: auto;
     gap: 10px;
   }
+  .filter{
+    padding: 0px;
+    margin: 0px;
+  }
+  .tags{
+    margin:0px;
+    
+  }
+  .Lateral{
+    flex-direction: column;
+    padding: 10px;
+  }
 }
 footer{
   display: flex;
@@ -163,8 +174,4 @@ footer{
   align-items: center;
   font-weight: bold;
   color: #ffffff;
-}
-
-.tags li #veintiuno:checked~#elementos .quince{
-  display: none;
 }
