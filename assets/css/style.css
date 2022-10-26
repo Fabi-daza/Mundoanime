@@ -110,9 +110,19 @@ body{
   align-items: flex-start;
   height: fit-content;
 }
+.tags{
+  padding: 10px 0px;
+}
 .Lateral ul li{
   list-style: none;
   cursor: pointer;
+}
+.tags a{
+  text-decoration: none;
+  color: #000000;
+}
+.tags a:active{
+  font-weight: bold;
 }
 @media all and (max-width:1023px){
   .Lateral{
@@ -122,16 +132,10 @@ body{
   }
   .Lateral .filter{
     display: flex;
+    margin: 20px;
   }
   .Lateral .filter li{
     margin:0px 10px 0px 10px
-  }
-  .tags li{
-    display: none;
-    position: absolute;
-  }
-  .tags li:hover{
-    display:block;
   }
   .Products{
     justify-content: flex-start;
@@ -159,4 +163,8 @@ footer{
   align-items: center;
   font-weight: bold;
   color: #ffffff;
+}
+
+.tags li #veintiuno:checked~#elementos .quince{
+  display: none;
 }
